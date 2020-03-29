@@ -30,5 +30,11 @@ grinning:
     - ":)"
     - "(＾ｖ＾)"
 
-{ :get_meaning => { "(￣ー￣)" => "grinning", "(＾ｖ＾)" => "happy" },
-:get_emoticon => { "=D" => "(￣ー￣)"}, ":)" => "(＾ｖ＾)" }
+{ :get_meaning => {
+  "(￣ー￣)" => "grinning",
+  "(＾ｖ＾)" => "happy"
+},
+:get_emoticon => {
+  "=D" => "(￣ー￣)", 
+  ":)" => "(＾ｖ＾)"
+}
