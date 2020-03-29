@@ -7,7 +7,7 @@ def load_library(library)
   new_hash = { :get_meaning => {}, :get_emoticon => {} }
 
   emoticon_hash.reduce(new_hash) do |memo, (key, value)|
-    memo[:get_meaning][value[1]] = ""
+    memo[:get_meaning][value[1]] = key
     memo
   end
 
