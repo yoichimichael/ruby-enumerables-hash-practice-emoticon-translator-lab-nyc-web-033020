@@ -22,4 +22,13 @@ def get_english_meaning
   # code goes here
 end
 
-{ :get_meaning => {}, :get_emoticon => {} }
+grinning:
+  - "=D"
+  - "(￣ー￣)"
+
+  happy:
+    - ":)"
+    - "(＾ｖ＾)"
+
+{ :get_meaning => { "(￣ー￣)" => "grinning", "(＾ｖ＾)" => "happy" },
+:get_emoticon => { "=D" => "(￣ー￣)"}, ":)" => "(＾ｖ＾)" }
