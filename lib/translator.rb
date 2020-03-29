@@ -16,10 +16,11 @@ end
 
 def get_japanese_emoticon(library, emoticon)
   library_hash = load_library(library)
-  if library_hash[:get_emoticon].has_key?(emoticon)
-    return library_hash[:get_emoticon][emoticon]
-  else
-    puts "Sorry, not a known emoticon"
+  library_hash[:get_emoticon][emoticon]
+  #if library_hash[:get_emoticon].has_key?(emoticon)
+    #return library_hash[:get_emoticon][emoticon]
+  #else
+    #puts "Sorry, not a known emoticon"
 end
 
 def get_english_meaning
