@@ -3,6 +3,7 @@ require "yaml"
 def load_library(library)
   emoticon_library = YAML.load_file(library)
   meaning_array = emoticon_library.reduce([]) { |memo, (meaning, emo)| memo << meaning; memo }
+  emoticon_array = emoticon_library.reduce([]) { |memo, (meaning, emo)| memo << emo; memo }
 
 end
 
