@@ -8,7 +8,7 @@ def load_library(library)
 
   emoticon_hash.reduce(new_hash) do |memo, (key, value)|
     memo[:get_meaning][value[1]] = key
-    memo[:get_emoticon][value[0]] = ""
+    memo[:get_emoticon][value[0]] = value[1]
     memo
   end
 
