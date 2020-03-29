@@ -16,25 +16,10 @@ end
 
 def get_japanese_emoticon(library, emoticon)
   library_hash = load_library(library)
+  library_hash[:get_emoticon][emoticon]
 end
 
 def get_english_meaning
   # code goes here
 end
 
-grinning:
-  - "=D"
-  - "(￣ー￣)"
-
-  happy:
-    - ":)"
-    - "(＾ｖ＾)"
-
-{ :get_meaning => {
-  "(￣ー￣)" => "grinning",
-  "(＾ｖ＾)" => "happy"
-},
-:get_emoticon => {
-  "=D" => "(￣ー￣)", 
-  ":)" => "(＾ｖ＾)"
-}
