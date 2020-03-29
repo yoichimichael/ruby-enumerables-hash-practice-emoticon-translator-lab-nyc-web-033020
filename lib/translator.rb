@@ -6,7 +6,9 @@ def load_library(library)
   emoticon_array = emoticon_hash.reduce([]) { |memo, (meaning, emo)| memo << emo; memo }
   new_hash = { :get_meaning => {}, :get_emoticon => {} }
 
-  emoticon_array
+  emoticon_array.map { |pair| new_hash[pair[2]] = [] }
+
+  new_hash
 end
 
 def get_japanese_emoticon
