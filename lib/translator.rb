@@ -2,15 +2,20 @@ require "yaml"
 
 def load_library(library)
   emoticon_hash = YAML.load_file(library)
-  word_array = emoticon_hash.reduce([]) { |memo, (meaning, emo)| memo << meaning; memo }
-  emoticon_array = emoticon_hash.reduce([]) { |memo, (meaning, emo)| memo << emo; memo }
+  #word_array = emoticon_hash.reduce([]) { |memo, (meaning, emo)| memo << meaning; memo }
+  #emoticon_array = emoticon_hash.reduce([]) { |memo, (meaning, emo)| memo << emo; memo }
   new_hash = { :get_meaning => {}, :get_emoticon => {} }
 
-  #puts japanese emoticon keys inside 'get_meaning'
-  emoticon_array.map { |pair| new_hash[:get_meaning][pair[1]] = "" }
+  emoticon_hash.reduce(new_hash) do |memo, (key, value)|
+    memo[:get_emoticon][value[1]] = ""
+    memo
+  end
 
-  
-  word_array.map { |word| new_hash[:get_meaning] = "" }
+  #puts japanese emoticon keys inside 'get_meaning'
+  #emoticon_array.map { |pair| new_hash[:get_meaning][pair[1]] = "" }
+
+
+  #ord_array.map { |word| new_hash[:get_meaning] = "" }
 
   new_hash
 end
